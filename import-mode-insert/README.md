@@ -20,17 +20,25 @@ Clarify that:
 ----
 
 #### 💡 Why It Matters
-Helps keep your project clean by avoiding duplicate hosts when importing multiple scan reports. Useful for merging partial scans or repeated results without clutter.
+
+This mode is useful when importing multiple scan reports that may contain overlapping data. It ensures that previously imported IPs are skipped, preventing duplicate entries. Typical use cases include:
+
+- Merging partial scans performed at different times.
+- Importing targeted service scans after an initial wide scan.
+- Consolidating scan results from distributed scanning systems.
+
+`insert` mode allows you to append new data to the project without altering or duplicating existing scan results.
 
 ---
 
 #### 📂 Files
 
-| File                           | Description                                                   |
-| ------------------------------ | ------------------------------------------------------------- |
-| [`insert1.xml`](./insert1.xml) | First import — adds 3 new IPs to an empty project.            |
-| [`insert2.xml`](./insert2.xml) | Contains 1 IP already imported in `insert1.xml` — skipped.    |
-| [`insert3.xml`](./insert3.xml) | Contains 1 duplicate and 1 new IP — only the new IP is added. |
+| File                             | IPs Included                                                | Description                                                                 |
+| -------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`insert1.xml`](./insert1.xml)   | 134.209.203.62, 159.223.15.22, 188.166.121.245              | First import — all IPs are inserted.                                        |
+| [`insert2.xml`](./insert2.xml)   | 159.223.15.22                                               | Already seen — skipped entirely under `insert` mode.                        |
+| [`insert3.xml`](./insert3.xml)   | 188.166.121.245, 128.199.62.51                              | 188.166.121.245 skipped; 128.199.62.51 is a new IP and gets inserted.       |
+
 
 ---
 
@@ -77,4 +85,12 @@ No new IPs added in project '4d8d98c5-522d-40ff-97a9-51052dfcf39a'
 
 python falcli.py project ips import --file insert3.xml --mode insert
 Imported IPs report into project '4d8d98c5-522d-40ff-97a9-51052dfcf39a'. Result: 1 IP.
+
+# Get statistics
+python falcli.py project ips list
+IP               PORT_COUNT
+128.199.62.51    6         
+134.209.203.62   6         
+159.223.15.22    6         
+188.166.121.245  8  
 ```
