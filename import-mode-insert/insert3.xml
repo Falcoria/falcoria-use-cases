@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed May 28 08:27:30 2025 as: nmap -p- -&#45;min-rate 10000 -&#45;open -oX insert3.xml 188.166.121.245 128.199.62.51 -->
+<nmaprun scanner="nmap" args="nmap -p- -&#45;min-rate 10000 -&#45;open -oX insert3.xml 188.166.121.245 128.199.62.51" start="1748420850" startstr="Wed May 28 08:27:30 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1748420850" endtime="1748420877"><status state="up" reason="echo-reply" reason_ttl="57"/>
+<address addr="188.166.121.245" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65525">
+<extrareasons reason="no-responses" count="65525"/>
+</extraports>
+<extraports state="closed" count="2">
+<extrareasons reason="resets" count="2"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="57"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40998"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="40999"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="43210"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="shaperai" method="table" conf="3"/></port>
+<port protocol="tcp" portid="44888"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="49222"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="58777"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+</ports>
+<times srtt="13440" rttvar="4249" to="100000"/>
+</host>
+<host starttime="1748420850" endtime="1748420877"><status state="up" reason="echo-reply" reason_ttl="57"/>
+<address addr="128.199.62.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65527">
+<extrareasons reason="no-responses" count="65527"/>
+</extraports>
+<extraports state="closed" count="2">
+<extrareasons reason="resets" count="2"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="57"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="33060"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="mysqlx" method="table" conf="3"/></port>
+<port protocol="tcp" portid="43890"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="44222"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="44500"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+<port protocol="tcp" portid="45555"><state state="open" reason="syn-ack" reason_ttl="56"/></port>
+</ports>
+<times srtt="9764" rttvar="3393" to="100000"/>
+</host>
+<runstats><finished time="1748420877" timestr="Wed May 28 08:27:57 2025" elapsed="26.57" summary="Nmap done at Wed May 28 08:27:57 2025; 2 IP addresses (2 hosts up) scanned in 26.57 seconds" exit="success"/><hosts up="2" down="0" total="2"/>
+</runstats>
+</nmaprun>

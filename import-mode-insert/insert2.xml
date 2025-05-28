@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed May 28 08:25:23 2025 as: nmap -p 22,27017,2121,50443,53000,50777 -Pn -n -sV -oX insert2.xml 159.223.15.22 -->
+<nmaprun scanner="nmap" args="nmap -p 22,27017,2121,50443,53000,50777 -Pn -n -sV -oX insert2.xml 159.223.15.22" start="1748420723" startstr="Wed May 28 08:25:23 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="6" services="22,2121,27017,50443,50777,53000"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1748420724" endtime="1748420786"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="159.223.15.22" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="57"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.13" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="2121"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service></port>
+<port protocol="tcp" portid="27017"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="mongod" servicefp="SF-Port27017-TCP:V=7.80%I=7%D=5/28%Time=6836C87F%P=x86_64-pc-linux-gnu%r(mongodb,114,&quot;\x14\x01\0\0j\0\0\0:0\0\0\x01\0\0\0\x08\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x01\0\0\0\xf0\0\0\0\x01ok\0\0\0\0\0\0\0\0\0\x02errmsg\0\xa1\0\0\0Unsupported\x20OP_QUERY\x20command:\x20serverStatus\.\x20The\x20client\x20driver\x20may\x20require\x20an\x20upgrade\.\x20For\x20more\x20details\x20see\x20https://dochub\.mongodb\.org/core/legacy-opcode-removal\0\x10code\0`\x01\0\0\x02codeName\0\x1a\0\0\0UnsupportedOpQueryCommand\0\0&quot;)%r(GetRequest,A9,&quot;HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nContent-Type:\x20text/plain\r\nContent-Length:\x2085\r\n\r\nIt\x20looks\x20like\x20you\x20are\x20trying\x20to\x20access\x20MongoDB\x20over\x20HTTP\x20on\x20the\x20native\x20driver\x20port\.\r\n&quot;)%r(FourOhFourRequest,A9,&quot;HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nContent-Type:\x20text/plain\r\nContent-Length:\x2085\r\n\r\nIt\x20looks\x20like\x20you\x20are\x20trying\x20to\x20access\x20MongoDB\x20over\x20HTTP\x20on\x20the\x20native\x20driver\x20port\.\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="50443"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="unknown" servicefp="SF-Port50443-TCP:V=7.80%I=7%D=5/28%Time=6836C874%P=x86_64-pc-linux-gnu%r(NULL,2E,&quot;{\&quot;jsonrpc\&quot;:\x20\&quot;2\.0\&quot;,\x20\&quot;result\&quot;:\x20\&quot;pong\&quot;,\x20\&quot;id\&quot;:\x201}\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="50777"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="echo" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="53000"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="unknown" servicefp="SF-Port53000-TCP:V=7.80%I=7%D=5/28%Time=6836C874%P=x86_64-pc-linux-gnu%r(NULL,7,&quot;FAKEDNS&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="18209" rttvar="6789" to="100000"/>
+</host>
+<runstats><finished time="1748420786" timestr="Wed May 28 08:26:26 2025" elapsed="62.74" summary="Nmap done at Wed May 28 08:26:26 2025; 1 IP address (1 host up) scanned in 62.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
