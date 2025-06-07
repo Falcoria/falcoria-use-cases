@@ -1,44 +1,53 @@
+*See the full [Falcoria Documentation](https://falcoria.github.io/falcoria-docs/) for system overview and additional features.*
+
 # Falcoria Use Cases
 
-📚 Part of the [Falcoria Documentation](https://falcoria.github.io/falcoria-docs/)
+This section provides real-world examples of how different Falcoria features and import modes behave in practice.
 
-This repository contains real-world examples demonstrating how different features and modes of Falcoria work. Each folder includes scan reports, expected results, and a clear explanation of how Falcoria behaves in each case.
-
-Falcoria is a modular scan coordination system that helps manage large-scale scanning workflows with precision and flexibility.
+Each example includes scan reports, expected results, and clear explanations to help you validate and understand Falcoria's behavior.
 
 ---
 
-## 📂 Available Use Cases
+## Available Use Cases
 
-| Use Case            | Description                                                                 | Link                            |
-|---------------------|-----------------------------------------------------------------------------|---------------------------------|
-| `insert` mode       | Demonstrates how only new IPs are imported while duplicates are skipped.    | [View ›](./import-mode-insert) |
-| More coming soon... | Additional import modes and scan strategies will be added over time.        |                                 |
+| Use Case            | Description                                                              | Link                            |
+| ------------------- | ------------------------------------------------------------------------ | ------------------------------- |
+| `insert` mode       | Demonstrates how only new IPs are imported while duplicates are skipped. | [View ›](./import-mode-insert)  |
+| `replace` mode      | Demonstrates how existing IPs are fully replaced with new scan data.     | [View ›](./import-mode-replace) |
+| More coming soon... | Additional import modes and scan strategies will be added over time.     |                                 |
 
 ---
 
-## 🎯 Goal
+## Goal
 
 Help users and teams:
-- Understand Falcoria’s import logic.
-- Validate that scan results are processed correctly.
-- Explore edge cases and integration flows with real data.
+
+* Understand Falcoria's import logic.
+* Validate that scan results are processed correctly.
+* Explore edge cases and integration flows with real data.
 
 ---
 
-## 🛠 How to Use
+## How to Use
 
 Each folder includes:
-- Sample scan reports (`*.xml`)
-- A dedicated README explaining the behavior
-- CLI and `curl` commands
-- Expected outputs
 
-You can run the examples against your local Falcoria instance to test or validate functionality.
+* Sample scan reports (`*.xml`)
+* A dedicated README explaining the behavior
+* CLI and `curl` commands
+* Expected outputs
+
+Run these examples against your local Falcoria instance to test or validate functionality.
 
 ---
 
-## 🧭 Start Here
+## Related
 
-To understand how import modes work and where they are used in the system (e.g., during scans or manual uploads), visit the [Import Modes Overview](https://falcoria.github.io/falcoria-docs/import-modes/).
+To learn more about import modes and when to use them, visit the [Import Modes Overview](https://falcoria.github.io/falcoria-docs/import-modes/).
 
+---
+
+## Use Case Repositories
+
+* [`insert` mode](https://github.com/Falcoria/falcoria-use-cases/tree/main/import-mode-insert)
+* [`replace` mode](https://github.com/Falcoria/falcoria-use-cases/tree/main/import-mode-replace)
